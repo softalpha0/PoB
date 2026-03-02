@@ -1,4 +1,4 @@
-# 🌶️ Spicenet Proof of Belief (PoB) Bot
+# Proof of Belief (PoB) Bot
 
 A Discord bot designed to verify community contributions and manage rewards within the Spicenet ecosystem.
 
@@ -17,7 +17,7 @@ A Discord bot designed to verify community contributions and manage rewards with
 ### 📋 Submission Categories
 | Category | Reward | Requirement |
 | :--- | :--- | :--- |
-| Engagement | 5 BC | Social interactions |
+| Engagement | 5 BC | community activites interaction  |
 | Bug Report | 15 BC | Verified technical issues |
 | Content | 20 BC | High-quality media/threads |
 | Community Spaces | 25 BC | 20+ attendees + Recap |
