@@ -10,7 +10,6 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 MOD_CHANNEL_ID = int(os.getenv('MOD_CHANNEL_ID'))
 
-# --- CLOUD PERSISTENCE ---
 if not os.path.exists('data'):
     os.makedirs('data')
 
@@ -22,7 +21,6 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS blacklist
                   (user_id TEXT PRIMARY KEY)''')
 db.commit()
 
-# --- LEADERBOARD PAGINATION ---
 class PaginationView(discord.ui.View):
     def __init__(self, data, title):
         super().__init__(timeout=60)
@@ -37,7 +35,6 @@ class PaginationView(discord.ui.View):
         end = start + self.per_page
         page_data = self.data[start:end]
         
-        # FIXED LINE: Added enumerate() to define 'i'
         lb_text = "\n".join([f"**#{i+1+start}** <@{u_id}> — {creds} BC" for i, (u_id, creds) in enumerate(page_data)])
         
         embed = discord.Embed(title=self.title, description=lb_text or "No data.", color=0xFFD700)
@@ -73,7 +70,6 @@ class PoBBot(commands.Bot):
 
 bot = PoBBot()
 
-# --- MODERATOR VIEW ---
 class ApprovalView(discord.ui.View):
     def __init__(self, user_id, amount, category):
         super().__init__(timeout=None)
