@@ -11,7 +11,7 @@ A Discord bot designed to verify community contributions and manage rewards with
 ###  Commands
 * `/submit`: Upload proof for Engagement, Bug Reports, Content, or Spaces.
 * `/profile`: Privately check your own BC balance and strike count.
-* `/leaderboard`: See the top 10 Believers.
+* `/leaderboard`: See the top 10 Believers and "Next" button to keep scrolling.
 * `/pardon`: (Admin Only) Clear strikes or un-blacklist a user.
 
 ###  Submission Categories
